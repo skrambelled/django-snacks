@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django Snacks!{% endblock title %}</title>
+</head>
+<body>
+    <header>{% block header %}
+        <h1>Django Snacks!</h1>
+    {% endblock header %}</header>
+    <main>{% block main %}
+        <article>Sometimes you just need a little byte.</article>
+    {% endblock main %}</main>
+    <footer>{% block footer %}
+        <nav>
+            <a href={% url 'home' %}>Home</a>
+            <a href={% url 'about' %}>About</a>
+        </nav>
+    {% endblock footer %}</footer>
+</body>
+</html>
